@@ -1,0 +1,14 @@
+1: Install djongo: pip install djongo
+Into settings.py file of your project, add:
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'your-db-name',
+        'CLIENT': {
+           'host': 'your-db-host',
+        }
+    }
+}
+
+Run manage.py makemigrations <app_name> followed by manage.py migrate (ONLY the first time to create collections in mongoDB)
+YOUR ARE SET! HAVE FUN!
